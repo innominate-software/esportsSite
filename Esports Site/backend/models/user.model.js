@@ -1,18 +1,6 @@
-// /backend/user.js
+// /backend/models/user.js
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-
-//this is an example of what I think we should do very little of.
-const MatchSchema = new Schema(
-    {
-        id: Number,
-        gameId: Number,
-        userIds: [],
-        teamIds: [],
-        result: String, //need to talk about format of value
-    },
-    { timestamps: true}
-);
 
 // this will be our data base's user structure 
 const UserSchema = new Schema(
@@ -26,7 +14,7 @@ const UserSchema = new Schema(
     password: String,
     email: String,
     birthday: String,
-    matches: [MatchSchema],
+    matches: [],
     inGameName: String
   },
   { timestamps: true }

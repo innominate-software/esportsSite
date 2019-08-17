@@ -1,0 +1,2 @@
+# Ignoring local logs made during local testing
+*.log
