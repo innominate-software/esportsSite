@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SignUp from './createUser';
 import {BrowserRouter, Route} from 'react-router-dom';
+import { Jumbotron, Container} from 'reactstrap';
 
 
 const title = {
@@ -109,7 +110,14 @@ export default class Home extends Component {
       <div id='container'>
            <a href="signup">Sign Up</a>
         </div>
-  
+        <div>
+      <Jumbotron fluid>
+        <Container fluid>
+          <h1 className="display-3">Fluid jumbotron</h1>
+          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </Container>
+      </Jumbotron>
+    </div>
       <div>
           <br>
           </br>
