@@ -101,9 +101,7 @@ export default class Home extends Component {
     });
   };
 
-  // here is our UI
-  // it is easy to understand their functions when you
-  // see them render into our screen
+  // The breaks are to separate the test data from the real page.
   render() {
     const { data } = this.state;
     return (
@@ -111,7 +109,23 @@ export default class Home extends Component {
       <div id='container'>
            <a href="signup">Sign Up</a>
         </div>
+  
       <div>
+          <br>
+          </br>
+          <br>
+          </br><br>
+          </br><br>
+          </br><br>
+          </br><br>
+          </br><br>
+          </br><br>
+          </br><br>
+          </br><br>
+          </br><br>
+          </br><br>
+          </br><br>
+          </br>
         <Route exact={true} path='/signin' render={() => (
             <div className="App">
               <createUser />
