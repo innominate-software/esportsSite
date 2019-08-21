@@ -129,7 +129,7 @@ export default class Home extends Component {
       <BrowserRouter>
 
         <Navbar className="navbar" light expand="md">
-          <NavbarBrand href="/">Don't Feed</NavbarBrand>
+          <NavbarBrand className="navHeader" href="/">Don't Feed</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -151,13 +151,13 @@ export default class Home extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-        <container className='purpleShadow'>
-          <Jumbotron fluid>
+        <container className=' '>
+          {/* <Jumbotron fluid>
             <Container fluid>
               <h1 className="display-3">Fluid jumbotron</h1>
               <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
             </Container>
-          </Jumbotron>
+          </Jumbotron> */}
         </container>
         <div>
           <br>

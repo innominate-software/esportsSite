@@ -10,7 +10,7 @@
   }
 
 
-/* Color Pallete */
+/* Color Pallete 1 */
 
 .bluePopsicle {
     background: #0f2862
@@ -28,24 +28,73 @@
     background: #4f5f76
 }
 
+/* ---------------------------------------------- */
+
+/* Color Pallete 2 */
+
+.darkGrey {
+    background: #393939;
+}
+
+.deepOrange {
+    background: #FF5A09 
+}
+
+.lightOrange {
+    background: #ec7f37 
+}
+
+.orangeYellow {
+    background: #be4f0c 
+}
+
 /* General Styles */
 
 * {
     font-family: 'big';
+    transition: 300ms ease;
     /* font-weight: bold; */
 }
 
+.navHeader {
+    color: #fff !important;
+    border-right: 4px solid #9e363a;
+    padding-right: 10px !important;
+    padding-top: 0px !important;
+    padding-bottom: 5px !important;
+}
+
+.mainContainer {
+    min-height: 100vh !important;
+}
+
 .navbar {
-    background: #0f2862;
+    background: #091f36;
 }
 
 .navLink {
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-bottom: 3px solid transparent;
+    transition: 300ms ease;
+}
+
+.navLink:hover {
     color: #fff !important;
-    /* border-right: 3px solid #9e363a; */
+    border-bottom: 3px solid #9e363a;
+    transition: 300ms ease;
 }
 
 .signupBtn {
-    color: #fff!important;
+    letter-spacing: 2px !important;
+    margin-top: 4px !important;
+    margin-left: 15px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
     float: right !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+.signupBtn:hover {
+    color: #fff!important;
     border: 1px solid #fff !important;
 }
