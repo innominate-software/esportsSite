@@ -3,14 +3,25 @@ import axios from 'axios';
 import SignUp from './createUser';
 
 // UI Components
-
+import './App.css';
+import { Container, Row, Col, Jumbotron } from 'reactstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { Jumbotron, Container } from 'reactstrap';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from 'reactstrap';
 
 
 const title = {
@@ -116,26 +127,38 @@ export default class Home extends Component {
     return (
 
       <BrowserRouter>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton edge="start" color="inherit" aria-label="menu">
-              <MenuIcon />
-            </IconButton>
-            <Button variant="outlined" href="#outlined-buttons">
-              Sign Up</Button>
-          </Toolbar>
-        </AppBar>
-        <div id='container'>
-          <a href="signup">Sign Up</a>
-        </div>
-        <div>
+
+        <Navbar className="navbar" light expand="md">
+          <NavbarBrand href="/">Don't Feed</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink className='navLink' href="/">Things</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className='navLink' href="/">Stuff</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className='navLink' href="/">Junk</NavLink>
+              </NavItem>
+              <NavItem>
+                <Button className='signupBtn' variant="outlined" href="signup">
+                  Sign Up
+              </Button>
+              </NavItem>
+
+            </Nav>
+          </Collapse>
+        </Navbar>
+        <container className='purpleShadow'>
           <Jumbotron fluid>
             <Container fluid>
               <h1 className="display-3">Fluid jumbotron</h1>
               <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
             </Container>
           </Jumbotron>
-        </div>
+        </container>
         <div>
           <br>
           </br>

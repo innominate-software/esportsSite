@@ -4,12 +4,13 @@ import axios from 'axios';
 import Signup from './createUser';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Home from '../src/home';
+import Stylesheet from './App.css';
 
 class App extends Component {
   render(){
     return (
       <BrowserRouter>
-      <div className="App">
+      <div className="App greyBlueLeaf">
       <Route exact={true} path='/' render={() => (
             <div className="App">
               <Home />

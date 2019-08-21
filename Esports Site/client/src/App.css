@@ -1,0 +1,51 @@
+/* Fonts */
+@font-face {
+    font-family: 'big';
+    src: url('./assets/fonts/BIGJOHN.otf');
+  }
+
+@font-face {
+    font-family: 'slim';
+    src: url('./assets/fonts/SlimJoe.otf');
+  }
+
+
+/* Color Pallete */
+
+.bluePopsicle {
+    background: #0f2862
+}
+
+.redLine {
+    background: #9e363a
+}
+
+.purpleShadow {
+    background: #091f36
+}
+
+.greyBlueLeaf {
+    background: #4f5f76
+}
+
+/* General Styles */
+
+* {
+    font-family: 'big';
+    /* font-weight: bold; */
+}
+
+.navbar {
+    background: #0f2862;
+}
+
+.navLink {
+    color: #fff !important;
+    /* border-right: 3px solid #9e363a; */
+}
+
+.signupBtn {
+    color: #fff!important;
+    float: right !important;
+    border: 1px solid #fff !important;
+}
