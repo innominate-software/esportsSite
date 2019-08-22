@@ -147,6 +147,8 @@ export default class Home extends Component {
         <Navbar className="navbar" light expand="md">
           <NavbarBrand className="navHeader" href="/">
             <img className="logoHeader" src={logoBrand} alt="Logo" />
+            or
+            <img className="logoHeader" src={logo} alt="Logo" />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
