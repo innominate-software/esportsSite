@@ -10,7 +10,7 @@ class App extends Component {
   render(){
     return (
       <BrowserRouter>
-      <div className="App greyBlueLeaf mainContainer">
+      <div className="App black mainContainer">
       <Route exact={true} path='/' render={() => (
             <div className="App">
               <Home />

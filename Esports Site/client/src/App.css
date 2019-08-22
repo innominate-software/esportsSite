@@ -48,40 +48,120 @@
     background: #be4f0c 
 }
 
+/* ---------------------------------------------- */
+
+/* Color Palette 3 */
+
+.black {
+  background: #0b0c10 
+}
+
+.darkGrey {
+  background: #1f2833 
+}
+
+.lightGrey {
+  background: #c5c6c7 
+}
+
+.aquaBlue {
+  background: #66fcf1 
+}
+
+.blueGreen {
+  background: #45a29e 
+}
+
+/* ---------------------------------------------- */
+
+/* Color Palette 4 */
+
+.darkBlue {
+  background: #25274d 
+}
+
+.darkBlueGrey {
+  background: #1f2833 
+}
+
+.lightBlueGrey {
+  background: #aaabb8 
+}
+
+.lightBlue {
+  background: #2e9cca 
+}
+
+.blue {
+  background: #29648a 
+}
+
+
 /* General Styles */
 
 * {
     font-family: 'big';
-    transition: 300ms ease;
+    transition: 375ms ease;
     /* font-weight: bold; */
 }
 
+.logoHeader {
+  height: 90px;
+}
+
+.dotaLogoDropDown {
+  height: 20px;
+  margin-right: 10px;
+}
+
 .navHeader {
-    color: #fff !important;
-    border-right: 4px solid #9e363a;
+    /* color: #fff !important; */
+    /* border-right: 4px solid #9e363a; */
     padding-right: 10px !important;
     padding-top: 0px !important;
     padding-bottom: 5px !important;
 }
 
 .mainContainer {
+  background-image: linear-gradient(to bottom, rgba(37, 39, 77, 1)  , rgba(37, 39, 77, 0.8)), url("./assets/img/backgrounds/bgImage1.png");
+  background-size: cover;
     min-height: 100vh !important;
 }
 
 .navbar {
-    background: #091f36;
+    background: rgba(37, 39, 77, 1) ;
+    border-bottom: 3px solid #66fcf1;
+}
+
+.gamesDropDownItem {
+  font-family: 'slim' !important;
+  font-weight: bold !important;
+  color: #66fcf1 !important;
+}
+
+.gamesDropDownItem:hover {
+  background: #66fcf1 !important;
+  font-weight: bold !important;
+  color: #25274d !important;
+}
+
+.gamesDropDown {
+  background: #29648a !important;
+  border: 3px solid #66fcf1 !important;
 }
 
 .navLink {
+    margin-right: 15px !important;
     letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.8) !important;
-    border-bottom: 3px solid transparent;
+    color: rgba(102, 252, 241, 0.7) !important;
+    border-left: 3px solid transparent;
     transition: 300ms ease;
 }
 
 .navLink:hover {
-    color: #fff !important;
-    border-bottom: 3px solid #9e363a;
+    /* color: #fff !important; */
+    color: #66fcf1 !important;
+    border-left: 3px solid rgba(102, 252, 241, 1);
     transition: 300ms ease;
 }
 
@@ -89,12 +169,12 @@
     letter-spacing: 2px !important;
     margin-top: 4px !important;
     margin-left: 15px !important;
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(102, 252, 241, 0.7) !important;
     float: right !important;
-    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(102, 252, 241, 0.7) !important;
 }
 
 .signupBtn:hover {
-    color: #fff!important;
-    border: 1px solid #fff !important;
+    color: #66fcf1 !important;
+    border: 1px solid #66fcf1 !important;
 }
