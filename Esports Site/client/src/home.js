@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import SignUp from './createUser';
 
-// UI Components
+// UI Assets
 import './App.css';
 import logo from './assets/img/logo/dontfeedlogo.png';
 import logoBrand from './assets/img/logo/dontFeedLogoBrand.png';
@@ -11,6 +11,9 @@ import overwatchLogo from './assets/img/logo/overwatchLogo.png';
 import csgoLogo from './assets/img/logo/csgoLogo.png';
 import leagueLogo from './assets/img/logo/leagueOfLegendsLogo.png';
 import rocketLeagueLogo from './assets/img/logo/rocketLeagueLogo.png';
+
+// UI Components
+import { UncontrolledCarousel } from 'reactstrap';
 import { Container, Row, Col, Jumbotron } from 'reactstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
@@ -44,6 +47,30 @@ const title = {
   fontSize: '50px',
   color: 'red',
 }
+
+const items = [
+  {
+    src: logoBrand,
+    altText: 'Slide 1',
+    caption: 'Slide 1',
+    header: 'Slide 1 Header'
+  },
+  {
+    src: overwatchLogo,
+    altText: 'Slide 2',
+    caption: 'Slide 2',
+    header: 'Slide 2 Header'
+  },
+  {
+    src: dotaLogo,
+    altText: 'Slide 3',
+    caption: 'Slide 3',
+    header: 'Slide 3 Header'
+  }
+];
+
+const Example = () => <UncontrolledCarousel items={items} />;
+
 export default class Home extends Component {
   state = {
     data: [],
@@ -146,8 +173,8 @@ export default class Home extends Component {
 
         <Navbar className="navbar" light expand="md">
           <NavbarBrand className="navHeader" href="/">
-            <img className="logoHeader" src={logoBrand} alt="Logo" />
-            or
+            {/* <img className="logoHeader" src={logoBrand} alt="Logo" />
+            or */}
             <img className="logoHeader" src={logo} alt="Logo" />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
@@ -214,6 +241,9 @@ export default class Home extends Component {
         </Navbar>
         <container>
           <Row className='mainRow'>
+            <Col xs="12">
+              <UncontrolledCarousel className="headerCarousel" items={items} />
+            </Col>
             <Col xs="3">
               <Card className="card leftTopSection">
                 <CardHeader className="cardHeader slim">
@@ -276,7 +306,7 @@ export default class Home extends Component {
                       </Typography>
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
-                  </CardBody>
+                </CardBody>
                 <CardFooter>Footer</CardFooter>
               </Card>
             </Col>

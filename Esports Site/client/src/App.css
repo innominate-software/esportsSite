@@ -110,6 +110,22 @@
     /* font-weight: bold; */
 }
 
+.headerCarousel {
+  /* background-image: linear-gradient(to bottom, rgba(37, 39, 77, 1)  , rgba(37, 39, 77, 0.8)), url("./assets/img/backgrounds/bgImage1.png"); */
+  /* background-size: cover; */
+  height: 250px;
+
+}
+
+.headerCarousel img {
+  width: 150px;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+}
+
 .openSans {
   font-family: 'openSans' !important;
 }
