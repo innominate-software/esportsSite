@@ -9,6 +9,11 @@
     src: url('./assets/fonts/SlimJoe.otf');
   }
 
+  @font-face {
+    font-family: 'openSans';
+    src: url('./assets/fonts/OpenSans-Semibold.ttf');
+  }
+
 
 /* Color Palette 1 */
 
@@ -105,6 +110,23 @@
     /* font-weight: bold; */
 }
 
+.openSans {
+  font-family: 'openSans' !important;
+}
+
+.fontBlack {
+  color: #0b0c10;
+}
+
+.slim {
+  font-family: 'slim' !important;
+  font-weight: bold !important;
+}
+
+.big {
+  font-family: 'big' !important;
+}
+
 .logoHeader {
   height: 90px;
 }
@@ -112,6 +134,16 @@
 .dotaLogoDropDown {
   height: 20px;
   margin-right: 10px;
+}
+
+.leftSectionCardBody {
+  padding: 0 !important;
+}
+
+.leftSectionExpansion {
+  background: #aaabb8 !important;
+  border-radius: 0 !important;
+  border-bottom: 3px solid #66fcf1 !important;  
 }
 
 .navHeader {
@@ -126,6 +158,36 @@
   background-image: linear-gradient(to bottom, rgba(37, 39, 77, 1)  , rgba(37, 39, 77, 0.8)), url("./assets/img/backgrounds/bgImage1.png");
   background-size: cover;
     min-height: 100vh !important;
+}
+
+.mainRow {
+  padding: 75px 60px !important;
+  margin: 0 !important;
+}
+
+.card {
+  margin-top: 20px !important;
+  background: #0b0c10  !important;
+  color: #0b0c10;
+  font-family: 'openSans' !important;
+}
+.cardHeader {
+  background-image: linear-gradient(to right, #0b0c10 , rgba(37, 39, 77, 0.9)), url("./assets/img/backgrounds/bgImage2.png");
+  background-size: cover;
+  color: #66fcf1;
+  letter-spacing: 6px;
+  border-bottom: 3px solid #9e363a !important;
+
+}
+
+.cardBody {
+  color: #aaabb8;
+  background: #0b0c10;
+  font-family: 'openSans' !important;
+}
+
+.leftTopSection {
+  height: 800px
 }
 
 .navbar {

@@ -5,6 +5,7 @@ import SignUp from './createUser';
 // UI Components
 import './App.css';
 import logo from './assets/img/logo/dontfeedlogo.png';
+import logoBrand from './assets/img/logo/dontFeedLogoBrand.png';
 import dotaLogo from './assets/img/logo/dotaLogo.png';
 import overwatchLogo from './assets/img/logo/overwatchLogo.png';
 import csgoLogo from './assets/img/logo/csgoLogo.png';
@@ -13,8 +14,11 @@ import rocketLeagueLogo from './assets/img/logo/rocketLeagueLogo.png';
 import { Container, Row, Col, Jumbotron } from 'reactstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {
   Collapse,
   Navbar,
@@ -26,7 +30,13 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Card,
+  CardHeader,
+  CardFooter,
+  CardBody,
+  CardTitle,
+  CardText
 } from 'reactstrap';
 
 
@@ -136,7 +146,7 @@ export default class Home extends Component {
 
         <Navbar className="navbar" light expand="md">
           <NavbarBrand className="navHeader" href="/">
-            <img className="logoHeader" src={logo} alt="Logo" />
+            <img className="logoHeader" src={logoBrand} alt="Logo" />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -200,7 +210,113 @@ export default class Home extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-        <container className=' '>
+        <container>
+          <Row className='mainRow'>
+            <Col xs="3">
+              <Card className="card leftTopSection">
+                <CardHeader className="cardHeader slim">
+                  Content 001
+                  </CardHeader>
+                <CardBody className="cardBody leftSectionCardBody">
+                  <ExpansionPanel className="leftSectionExpansion">
+                    <ExpansionPanelSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel1a-content"
+                      id="panel1a-header">
+                      <Typography className="big fontBlack">Expansion Panel 1</Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                      <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                        sit amet blandit leo lobortis eget.
+                      </Typography>
+                    </ExpansionPanelDetails>
+                  </ExpansionPanel>
+                  <ExpansionPanel className="leftSectionExpansion">
+                    <ExpansionPanelSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel1a-content"
+                      id="panel1a-header">
+                      <Typography className="big fontBlack">Expansion Panel 2</Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                      <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                        sit amet blandit leo lobortis eget.
+                      </Typography>
+                    </ExpansionPanelDetails>
+                  </ExpansionPanel>
+                  <ExpansionPanel className="leftSectionExpansion">
+                    <ExpansionPanelSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel1a-content"
+                      id="panel1a-header">
+                      <Typography className="big fontBlack">Expansion Panel 3</Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                      <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                        sit amet blandit leo lobortis eget.
+                      </Typography>
+                    </ExpansionPanelDetails>
+                  </ExpansionPanel>
+                  <ExpansionPanel className="leftSectionExpansion">
+                    <ExpansionPanelSummary
+                      expandIcon={<ExpandMoreIcon />}
+                      aria-controls="panel1a-content"
+                      id="panel1a-header">
+                      <Typography className="big fontBlack">Expansion Panel 4</Typography>
+                    </ExpansionPanelSummary>
+                    <ExpansionPanelDetails>
+                      <Typography>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                        sit amet blandit leo lobortis eget.
+                      </Typography>
+                    </ExpansionPanelDetails>
+                  </ExpansionPanel>
+                  </CardBody>
+                <CardFooter>Footer</CardFooter>
+              </Card>
+            </Col>
+            <Col>
+              <Card className="card">
+                <CardHeader className="cardHeader slim">
+                  Content 002
+                      </CardHeader>
+                <CardBody className="cardBody">
+                  <CardTitle className="openSans">Special Title Treatment</CardTitle>
+                  <CardText className="openSans">With supporting text below as a natural lead-in to additional content.</CardText>
+                  <Button className="openSans">Go somewhere</Button>
+                </CardBody>
+                <CardFooter>Footer</CardFooter>
+              </Card>
+              <Card className="card">
+                <CardHeader className="cardHeader slim">
+                  Content 003
+                      </CardHeader>
+                <CardBody className="cardBody">
+                  <CardTitle className="openSans">Special Title Treatment</CardTitle>
+                  <CardText className="openSans">With supporting text below as a natural lead-in to additional content.</CardText>
+                  <Button className="openSans">Go somewhere</Button>
+                </CardBody>
+                <CardFooter>Footer</CardFooter>
+              </Card>
+            </Col>
+            <Col xs="3">
+              <Card className="card">
+                <CardHeader className="cardHeader slim">
+                  Content 004
+                      </CardHeader>
+                <CardBody className="cardBody">
+                  <CardTitle className="openSans">Special Title Treatment</CardTitle>
+                  <CardText className="openSans">With supporting text below as a natural lead-in to additional content.</CardText>
+                  <Button className="openSans">Go somewhere</Button>
+                </CardBody>
+                <CardFooter>Footer</CardFooter>
+              </Card>
+            </Col>
+          </Row>
+
 
 
         </container>
