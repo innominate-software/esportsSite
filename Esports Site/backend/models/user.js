@@ -9,12 +9,10 @@ const UserSchema = new Schema(
     username: String,
     firstName: String,
     lastName: String,
-    profilePhoto: Image,
     steamId: String,
     password: String,
     email: String,
     birthday: String,
-    matches: [],
     inGameName: String
   },
   { timestamps: true }

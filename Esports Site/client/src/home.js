@@ -177,7 +177,7 @@ export default class Home extends Component {
                     <span>
                       <img className="dotaLogoDropDown" src={leagueLogo} alt="Logo" />
                     </span>
-                    LEAGE OF LEGENDS
+                    LEAGUE OF LEGENDS
                   </DropdownItem>
                   <DropdownItem className="gamesDropDownItem">
                     <span>
