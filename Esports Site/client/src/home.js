@@ -11,6 +11,11 @@ import overwatchLogo from './assets/img/logo/overwatchLogo.png';
 import csgoLogo from './assets/img/logo/csgoLogo.png';
 import leagueLogo from './assets/img/logo/leagueOfLegendsLogo.png';
 import rocketLeagueLogo from './assets/img/logo/rocketLeagueLogo.png';
+import r6Logo from './assets/img/logo/r6Logo.png';
+import ti9Image from './assets/img/backgrounds/ti9Image.jpg';
+import r6Image from './assets/img/backgrounds/r6Image.jpg';
+import rocketLeagueImage from './assets/img/backgrounds/rocketLeagueImage.jpg';
+import csgoImage from './assets/img/backgrounds/csgoImage.jpg';
 
 // UI Components
 import { UncontrolledCarousel } from 'reactstrap';
@@ -50,22 +55,29 @@ const title = {
 
 const items = [
   {
-    src: logoBrand,
-    altText: 'Slide 1',
-    caption: 'Slide 1',
-    header: 'Slide 1 Header'
+    src: ti9Image,
+    className: 'ti9Image',
+    altText: 'Dota 2 News',
+    header: 'Dota 2',
+    caption: 'The International 2019'
   },
   {
-    src: overwatchLogo,
-    altText: 'Slide 2',
-    caption: 'Slide 2',
-    header: 'Slide 2 Header'
+    src: r6Image,
+    altText: 'Rainbow Six News',
+    header: 'Rainbow Six: Seige',
+    caption: 'OPERATION EMBER RISE: NEW OPERATORS'
   },
   {
-    src: dotaLogo,
-    altText: 'Slide 3',
-    caption: 'Slide 3',
-    header: 'Slide 3 Header'
+    src: rocketLeagueImage,
+    altText: 'Rocket League News',
+    header: 'ROCKET LEAGUE',
+    caption: 'SEASON 12 UPDATE COMING AUGUST 27TH'
+  },
+  {
+    src: csgoImage,
+    altText: 'Rainbow Six News',
+    header: 'CS:GO',
+    caption: 'ESL confirm IEM Beijing 2019'
   }
 ];
 
@@ -220,6 +232,12 @@ export default class Home extends Component {
                   </DropdownItem>
                   <DropdownItem className="gamesDropDownItem">
                     <span>
+                      <img className="dotaLogoDropDown" src={r6Logo} alt="Logo" />
+                    </span>
+                    Rainbow Six Seige
+                  </DropdownItem>
+                  <DropdownItem className="gamesDropDownItem">
+                    <span>
                       <img className="dotaLogoDropDown" src={rocketLeagueLogo} alt="Logo" />
                     </span>
                     ROCKET LEAGUE
@@ -337,7 +355,18 @@ export default class Home extends Component {
             <Col xs="3">
               <Card className="card">
                 <CardHeader className="cardHeader slim">
-                  Content 004
+                  Your Leagues
+                      </CardHeader>
+                <CardBody className="cardBody">
+                  <CardTitle className="openSans">Special Title Treatment</CardTitle>
+                  <CardText className="openSans">With supporting text below as a natural lead-in to additional content.</CardText>
+                  <Button className="openSans">Go somewhere</Button>
+                </CardBody>
+                <CardFooter>Footer</CardFooter>
+              </Card>
+              <Card className="card">
+                <CardHeader className="cardHeader slim">
+                  Your Matches
                       </CardHeader>
                 <CardBody className="cardBody">
                   <CardTitle className="openSans">Special Title Treatment</CardTitle>
