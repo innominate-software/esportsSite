@@ -2,26 +2,29 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Signup from './createUser';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Home from '../src/home';
 import Stylesheet from './App.css';
+import MainNav from './mainNav';
 
 class App extends Component {
-  render(){
+  render() {
     return (
       <BrowserRouter>
-      <div className="App black mainContainer">
-      <Route exact={true} path='/' render={() => (
+
+        <div className="App black mainContainer">
+          <MainNav></MainNav>
+          <Route exact={true} path='/' render={() => (
             <div className="App">
               <Home />
             </div>
-          )}/>
+          )} />
           <Route exact={true} path='/signup' render={() => (
             <div className="App">
               <Signup />
             </div>
-          )}/>
-      </div>
+          )} />
+        </div>
       </BrowserRouter>
     );
   }
