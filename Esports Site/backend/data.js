@@ -5,8 +5,38 @@ const Schema = mongoose.Schema;
 // this will be our data base's data structure 
 const DataSchema = new Schema(
   {
-    id: Number,
-    message: String
+    id: {
+      type: Number,
+      required: true
+    },
+    username: {
+      type: String,
+      required: true
+    },
+    firstName: {
+      type: String,
+      required: true
+    },
+    lastName: {
+      type: String,
+      required: true
+    },
+    steamId: {
+      type: String,
+      required: true
+    },
+    password: {
+      type: String,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true
+    },
+    inGameName: {
+      type: String,
+      required: true
+    }
   },
   { timestamps: true }
 );

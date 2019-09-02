@@ -3,11 +3,12 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Axios from 'axios';
 
+
 export default class createUser extends Component { 
   state = { 
       reqsMet: false,
       idToBeAdded: null,
-      data: [],
+      user: [],
     id: 0,
     message: null,
     intervalIsSet: false,
@@ -35,15 +36,15 @@ export default class createUser extends Component {
 
   getDataFromDb = () => {
     fetch('http://localhost:3001/api/getData')
-      .then((data) => data.json())
-      .then((res) => this.setState({ data: res.data }));
+      .then((user) => user.json())
+      .then((res) => this.setState({ user: res.data }));
   };
 
   putDataToDB = (e, username, password1, password2, firstName, lastName, email, steamId, ingameName) => {
     let reqsMet = false;
     let idToBeAdded = 0;
-    let currentIds = this.state.data.map((data) => data.id);
-    console.log(this.data);
+    let currentIds = this.state.user.map((user) => user.id);
+    console.log(this.user);
     e.preventDefault();
     while (currentIds.includes(idToBeAdded)) {
       ++idToBeAdded;
@@ -66,15 +67,23 @@ export default class createUser extends Component {
     }
     console.log(reqsMet);
     if(reqsMet){
+      const newUser = {
+        
+      }
+      this.setState({ user: newUser});
+      console.log(newUser);
         Axios.post('http://localhost:3001/api/putData', {
-            id: 100,
-            username: username,
-            firstName: firstName,
-            lastName: lastName,
-            steamId: steamId,
-            password: password1,
-            email: email,
-            inGameName: ingameName
+          id: 107,
+          username: username,
+          firstName: firstName,
+          lastName: lastName,
+          steamId: steamId,
+          password: password1,
+          email: email,
+          inGameName: ingameName
+        }).then(res => {
+          console.log(res);
+          console.log(res.data);
         });
     }
     
